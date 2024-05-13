@@ -34,6 +34,9 @@ jobs:
         run: pip install .
       - name: Setup Pages
         uses: actions/configure-pages@v3
+      - name: If we're generating docs for unified doc site deployment, use a different conf.py
+        if: ${{ github.event_name == 'release' }}
+        run: cp docs_src/unified_docs_conf.py docs_src/conf.py
       - name: Build Docs
         run: |
           cd docs_src
