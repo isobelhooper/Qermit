@@ -76,6 +76,10 @@ exclude_patterns = ["_build", "Thumbs.db", ".DS_Store"]
 html_theme = "pydata_sphinx_theme"
 
 html_theme_options = {
+    "header_manual_links": [
+        { "url": "https://cqcl.github.io/quantinuum-docs/qermit/index.html", "name": "API reference"},
+        { "url": "https://cqcl.github.io/quantinuum-docs/qermit/manual/index.html", "name": "User manual"},
+    ],
     "header_links_before_dropdown": 1,
     "logo": {
         "image_light": "_static/Quantinuum_logo_black.png",
